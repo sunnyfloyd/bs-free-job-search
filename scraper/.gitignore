@@ -1,0 +1,4 @@
+envs
+.vscode
+geckodriver.log
+scraper/__pycache__/
