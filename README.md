@@ -1,7 +1,7 @@
 # BS-Free Jobs
 
 <p align="center">
-  <a href="https://bs-free-job-search.herokuapp.com"><img src="https://i.imgur.com/EMdvCBx.png" alt="BS-Free Jobs"></a>
+  <a href="https://bs-free-job-search.herokuapp.com"><img src="https://i.imgur.com/GImlOV2.png" alt="BS-Free Jobs"></a>
 </p>
 
 BS-Free Jobs is a standalone overlay for NoFluffJobs with a flexible job filtering based on the desired technological stack. Job offers are ranked using provided stack criteria and displayed in the concise UI.
