@@ -14,6 +14,12 @@ BS-Free Jobs is a standalone overlay for NoFluffJobs with a flexible job filteri
 
 ## Technological Stack
 
+<p align="center">
+  <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask-logo">
+  <img src="https://upload.vectorlogo.zone/logos/sveltetechnology/images/fc06c9b6-d01c-4e1f-82be-557ad5f65d6e.svg" alt="svelte-logo">
+  <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg" alt="bootstrap-logo">
+</p>
+
 - Flask for REST API and server that serves static files.
 - Svelte for building a dynamic, single-page based application.
 - Bootstrap for UI visuals.

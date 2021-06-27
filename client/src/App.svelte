@@ -5,16 +5,16 @@
 
 	function formatNumber(num) {
 		return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ")
-	};
+	}
 
-	function nice(num, sep) {
+	function normalizeSalary(num, sep) {
 		if (!num && num !== 0) return "";
 		num = Math.round(num.toFixed(2) * 40000);
 		if (sep) {
 			num = formatNumber(num);
 		}
 		return num;
-	};
+	}
 
 	import { writable } from "svelte/store";
 	export const jobCriteria = writable({
@@ -30,16 +30,7 @@
 	let optional_stack;
 	let location;
 
-	// function addRequiredStack() {
-	// 	if (required_stack != null && required_stack !== "" && !$jobCriteria.required_stack.includes(required_stack)) {
-	// 		let stack = $jobCriteria.required_stack
-	// 		stack.push(required_stack);
-	// 		$jobCriteria.required_stack = stack;
-	// 		document.getElementById('inputMustHave').value = "";
-	// 		required_stack = '';
-	// 	}
-	// }
-	function addRequiredStack(stackType, storeObject, inputID) {
+	function addCriterion(stackType, storeObject, inputID) {
 		if (stackType != null && stackType !== "" && !storeObject.includes(stackType)) {
 			let stack = storeObject;
 			stack.push(stackType);
@@ -48,97 +39,34 @@
 			document.getElementById(inputID).value = "";
 			stackType = '';
 		}
-	};
-	function addOptionalStack() {
-		if (optional_stack != null && optional_stack !== "" && !$jobCriteria.optional_stack.includes(optional_stack)) {
-			let stack = $jobCriteria.optional_stack
-			stack.push(optional_stack);
-			$jobCriteria.optional_stack = stack;
-			document.getElementById('inputNiceHave').value = "";
-			optional_stack = '';
-		}
-	};
-	function addLocation() {
-		if (location != null && location !== "" && !$jobCriteria.location.includes(location)) {
-			let stack = $jobCriteria.location
-			stack.push(location);
-			$jobCriteria.location = stack;
-			document.getElementById('location').value = ""
-			location = '';
-		}
-	};
-	function removeCriterionRequired(crit, storeObject) {
+	}
+
+	function removeCriterion(crit, storeObject) {
 		let arr = storeObject;
 		const index = arr.indexOf(crit);
 		arr.splice(index, 1);
 		storeObject = arr;
 		$jobCriteria.experience = $jobCriteria.experience;
-	};
-	// function removeCriterionRequired(crit) {
-	// 	let arr = $jobCriteria.required_stack;
-	// 	const index = arr.indexOf(crit);
-	// 	arr.splice(index, 1);
-	// 	$jobCriteria.required_stack = arr;
-	// }
-	function removeCriterionOptional(crit) {
-		let arr = $jobCriteria.optional_stack;
-		const index = arr.indexOf(crit);
-		arr.splice(index, 1);
-		$jobCriteria.optional_stack = arr;
-	};
-	function removeCriterionLocation(crit) {
-		let arr = $jobCriteria.location;
-		const index = arr.indexOf(crit);
-		arr.splice(index, 1);
-		$jobCriteria.location = arr;
-	};
-
+	}
 
 	function handleKeyPress(e, stackType, storeObject, inputID) {
-		if (e.charCode === 13) addRequiredStack(stackType, storeObject, inputID);
-	};
+		if (e.charCode === 13) addCriterion(stackType, storeObject, inputID);
+	}
 
-	// const onKeyPressRequired = e => {
-    // 	if (e.charCode === 13) addRequiredStack();
-  	// };
-	// const onKeyPressOptional = e => {
-    // 	if (e.charCode === 13) addOptionalStack();
-  	// };
-	// const onKeyPressLocation = e => {
-    // 	if (e.charCode === 13) addLocation();
-  	// };
-
-	let jobs = [];  // tutaj zrobic null
+	let jobs = [];
 	let jobsFetched = false;
 
 	async function fetchJobs() {
-		$jobCriteria.min_salary = nice(start);
-		$jobCriteria.max_salary = nice(end);
+		$jobCriteria.min_salary = normalizeSalary(start);
+		$jobCriteria.max_salary = normalizeSalary(end);
 
 		let jobFetchParams = new URLSearchParams($jobCriteria).toString();
-		let jobFetchURL = new URL('/jobs?' + jobFetchParams, window.location.href)
+		let jobFetchURL = new URL('/jobs?' + jobFetchParams, window.location.href);
 		const res = await fetch(jobFetchURL, {method: "GET"});
 		const json = await res.json();
-		jobs = Object.values(json)
-		jobsFetched = true
-	};
-	
-	// async function fetchJobs() {
-	// 	$jobCriteria.min_salary = Math.round(nice(start) * 40000);
-	// 	$jobCriteria.max_salary = Math.round(nice(end) * 40000);
-
-	// 	console.log(JSON.stringify($jobCriteria))
-
-	// 	const res = await fetch("/jobs", {
-	// 		method: "GET",
-	// 		headers: {
-	// 			"Content-Type": "application/json",
-	// 		},
-	// 		body: JSON.stringify($jobCriteria),
-	// 	});
-	// 	const json = await res.json();
-	// 	jobs = Object.values(json)
-	// }
+		jobs = Object.values(json);
+		jobsFetched = true;
+	}
 </script>
 
 <div class="container">
@@ -155,12 +83,12 @@
 			on:keypress={handleKeyPress(event, required_stack, $jobCriteria.required_stack, 'inputMustHave')}
 		/>
 		<div class="d-inline-flex p-2">
-			<button type="button" class="btn btn-outline-primary btn-sm" on:click={addRequiredStack(required_stack, $jobCriteria.required_stack, 'inputMustHave')}>+</button>
+			<button type="button" class="btn btn-outline-primary btn-sm" on:click={addCriterion(required_stack, $jobCriteria.required_stack, 'inputMustHave')}>+</button>
 		</div>
 	</div>
 	<div>
 		{#each $jobCriteria.required_stack as tag}
-		<span class="badge bg-primary mx-1" on:click="{removeCriterionRequired(tag, $jobCriteria.required_stack)}">{tag}</span>
+		<span class="badge bg-primary mx-1" on:click="{removeCriterion(tag, $jobCriteria.required_stack)}">{tag}</span>
 		{/each}
 	</div>
 	
@@ -175,12 +103,12 @@
 			on:keypress={handleKeyPress(event, optional_stack, $jobCriteria.optional_stack, 'inputNiceHave')}
 		/>
 		<div class="d-inline-flex p-2">
-			<button type="button" class="btn btn-outline-primary btn-sm" on:click={addRequiredStack(optional_stack, $jobCriteria.optional_stack, 'inputNiceHave')}>+</button>
+			<button type="button" class="btn btn-outline-primary btn-sm" on:click={addCriterion(optional_stack, $jobCriteria.optional_stack, 'inputNiceHave')}>+</button>
 		</div>
 	</div>
 	<div>
 		{#each $jobCriteria.optional_stack as tag}
-		<span class="badge bg-primary mx-1" on:click="{removeCriterionOptional(tag)}">{tag}</span>
+		<span class="badge bg-primary mx-1" on:click="{removeCriterion(tag, $jobCriteria.optional_stack)}">{tag}</span>
 		{/each}
 	</div>
 
@@ -195,12 +123,12 @@
 			on:keypress={handleKeyPress(event, location, $jobCriteria.location, 'location')}
 		/>
 		<div class="d-inline-flex p-2">
-			<button type="button" class="btn btn-outline-primary btn-sm" on:click={addRequiredStack(location, $jobCriteria.location, 'location')}>+</button>
+			<button type="button" class="btn btn-outline-primary btn-sm" on:click={addCriterion(location, $jobCriteria.location, 'location')}>+</button>
 		</div>
 	</div>
 	<div>
 		{#each $jobCriteria.location as tag}
-		<span class="badge bg-primary mx-1" on:click="{removeCriterionLocation(tag)}">{tag}</span>
+		<span class="badge bg-primary mx-1" on:click="{removeCriterion(tag, $jobCriteria.location)}">{tag}</span>
 		{/each}
 	</div>
 
@@ -225,7 +153,7 @@
 			<label for="salary" class="form-label form-label mb-0 mt-1">Salary:</label>
 			<DoubleRangeSlider bind:start bind:end />
 			<div>
-				{nice(start, true)} PLN - {nice(end, true)} PLN
+				{normalizeSalary(start, true)} PLN - {normalizeSalary(end, true)} PLN
 			</div>
 		</div>
 	</div>
