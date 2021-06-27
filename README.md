@@ -14,8 +14,9 @@ BS-Free Jobs is a standalone overlay for NoFluffJobs with a flexible job filteri
 
 ## Technological Stack
 
-- Flask API that additionally serves static files.
+- Flask for REST API and server that serves static files.
 - Svelte for building a dynamic, single-page based application.
+- Bootstrap for UI visuals.
 
 ## Local Deployment
 

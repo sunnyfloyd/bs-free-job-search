@@ -803,38 +803,38 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
+    	child_ctx[23] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[28] = list[i];
+    	child_ctx[26] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[31] = list[i];
+    	child_ctx[29] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[31] = list[i];
+    	child_ctx[29] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[31] = list[i];
+    	child_ctx[29] = list[i];
     	return child_ctx;
     }
 
-    // (119:2) {#each $jobCriteria.required_stack as tag}
+    // (162:2) {#each $jobCriteria.required_stack as tag}
     function create_each_block_4(ctx) {
     	let span;
-    	let t_value = /*tag*/ ctx[31] + "";
+    	let t_value = /*tag*/ ctx[29] + "";
     	let t;
     	let mounted;
     	let dispose;
@@ -844,7 +844,7 @@ var app = (function () {
     			span = element("span");
     			t = text(t_value);
     			attr_dev(span, "class", "badge bg-primary mx-1");
-    			add_location(span, file, 119, 2, 3391);
+    			add_location(span, file, 162, 2, 4941);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -855,7 +855,7 @@ var app = (function () {
     					span,
     					"click",
     					function () {
-    						if (is_function(/*removeCriterionRequired*/ ctx[12](/*tag*/ ctx[31]))) /*removeCriterionRequired*/ ctx[12](/*tag*/ ctx[31]).apply(this, arguments);
+    						if (is_function(/*removeCriterionRequired*/ ctx[10](/*tag*/ ctx[29], /*$jobCriteria*/ ctx[8].required_stack))) /*removeCriterionRequired*/ ctx[10](/*tag*/ ctx[29], /*$jobCriteria*/ ctx[8].required_stack).apply(this, arguments);
     					},
     					false,
     					false,
@@ -867,7 +867,7 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*$jobCriteria*/ 128 && t_value !== (t_value = /*tag*/ ctx[31] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*$jobCriteria*/ 256 && t_value !== (t_value = /*tag*/ ctx[29] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(span);
@@ -880,17 +880,17 @@ var app = (function () {
     		block,
     		id: create_each_block_4.name,
     		type: "each",
-    		source: "(119:2) {#each $jobCriteria.required_stack as tag}",
+    		source: "(162:2) {#each $jobCriteria.required_stack as tag}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:2) {#each $jobCriteria.optional_stack as tag}
+    // (182:2) {#each $jobCriteria.optional_stack as tag}
     function create_each_block_3(ctx) {
     	let span;
-    	let t_value = /*tag*/ ctx[31] + "";
+    	let t_value = /*tag*/ ctx[29] + "";
     	let t;
     	let mounted;
     	let dispose;
@@ -900,7 +900,7 @@ var app = (function () {
     			span = element("span");
     			t = text(t_value);
     			attr_dev(span, "class", "badge bg-primary mx-1");
-    			add_location(span, file, 139, 2, 4031);
+    			add_location(span, file, 182, 2, 5737);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -911,7 +911,7 @@ var app = (function () {
     					span,
     					"click",
     					function () {
-    						if (is_function(/*removeCriterionOptional*/ ctx[13](/*tag*/ ctx[31]))) /*removeCriterionOptional*/ ctx[13](/*tag*/ ctx[31]).apply(this, arguments);
+    						if (is_function(/*removeCriterionOptional*/ ctx[11](/*tag*/ ctx[29]))) /*removeCriterionOptional*/ ctx[11](/*tag*/ ctx[29]).apply(this, arguments);
     					},
     					false,
     					false,
@@ -923,7 +923,7 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*$jobCriteria*/ 128 && t_value !== (t_value = /*tag*/ ctx[31] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*$jobCriteria*/ 256 && t_value !== (t_value = /*tag*/ ctx[29] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(span);
@@ -936,17 +936,17 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(139:2) {#each $jobCriteria.optional_stack as tag}",
+    		source: "(182:2) {#each $jobCriteria.optional_stack as tag}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (159:2) {#each $jobCriteria.location as tag}
+    // (202:2) {#each $jobCriteria.location as tag}
     function create_each_block_2(ctx) {
     	let span;
-    	let t_value = /*tag*/ ctx[31] + "";
+    	let t_value = /*tag*/ ctx[29] + "";
     	let t;
     	let mounted;
     	let dispose;
@@ -956,7 +956,7 @@ var app = (function () {
     			span = element("span");
     			t = text(t_value);
     			attr_dev(span, "class", "badge bg-primary mx-1");
-    			add_location(span, file, 159, 2, 4632);
+    			add_location(span, file, 202, 2, 6436);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -967,7 +967,7 @@ var app = (function () {
     					span,
     					"click",
     					function () {
-    						if (is_function(/*removeCriterionLocation*/ ctx[14](/*tag*/ ctx[31]))) /*removeCriterionLocation*/ ctx[14](/*tag*/ ctx[31]).apply(this, arguments);
+    						if (is_function(/*removeCriterionLocation*/ ctx[12](/*tag*/ ctx[29]))) /*removeCriterionLocation*/ ctx[12](/*tag*/ ctx[29]).apply(this, arguments);
     					},
     					false,
     					false,
@@ -979,7 +979,7 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*$jobCriteria*/ 128 && t_value !== (t_value = /*tag*/ ctx[31] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*$jobCriteria*/ 256 && t_value !== (t_value = /*tag*/ ctx[29] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(span);
@@ -992,14 +992,45 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(159:2) {#each $jobCriteria.location as tag}",
+    		source: "(202:2) {#each $jobCriteria.location as tag}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (194:1) {#if jobs}
+    // (269:23) 
+    function create_if_block_1(ctx) {
+    	let h4;
+
+    	const block = {
+    		c: function create() {
+    			h4 = element("h4");
+    			h4.textContent = "No jobs have been found :(";
+    			attr_dev(h4, "class", "text-center");
+    			add_location(h4, file, 269, 2, 8615);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h4, anchor);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h4);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(269:23) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (237:1) {#if jobs.length > 0}
     function create_if_block(ctx) {
     	let h4;
     	let t1;
@@ -1023,8 +1054,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(h4, file, 194, 1, 5730);
-    			add_location(div, file, 195, 1, 5752);
+    			add_location(h4, file, 237, 1, 7489);
+    			add_location(div, file, 238, 1, 7511);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h4, anchor);
@@ -1072,17 +1103,17 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(194:1) {#if jobs}",
+    		source: "(237:1) {#if jobs.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (216:6) {#each job["stack_in_requirements"] as stack}
+    // (259:6) {#each job["stack_in_requirements"] as stack}
     function create_each_block_1(ctx) {
     	let span;
-    	let t_value = /*stack*/ ctx[28] + "";
+    	let t_value = /*stack*/ ctx[26] + "";
     	let t;
 
     	const block = {
@@ -1090,14 +1121,14 @@ var app = (function () {
     			span = element("span");
     			t = text(t_value);
     			attr_dev(span, "class", "badge rounded-pill bg-secondary mx-1");
-    			add_location(span, file, 216, 6, 6683);
+    			add_location(span, file, 259, 6, 8442);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
     			append_dev(span, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*jobs*/ 64 && t_value !== (t_value = /*stack*/ ctx[28] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*jobs*/ 64 && t_value !== (t_value = /*stack*/ ctx[26] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(span);
@@ -1108,29 +1139,29 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(216:6) {#each job[\\\"stack_in_requirements\\\"] as stack}",
+    		source: "(259:6) {#each job[\\\"stack_in_requirements\\\"] as stack}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (197:2) {#each jobs as job}
+    // (240:2) {#each jobs as job}
     function create_each_block(ctx) {
     	let a;
     	let div11;
     	let div3;
     	let div0;
     	let h5;
-    	let t0_value = /*job*/ ctx[25]["title"] + "";
+    	let t0_value = /*job*/ ctx[23]["title"] + "";
     	let t0;
     	let t1;
     	let div2;
     	let div1;
-    	let t2_value = formatNumber(/*job*/ ctx[25]["min_salary"]) + "";
+    	let t2_value = formatNumber(/*job*/ ctx[23]["min_salary"]) + "";
     	let t2;
     	let t3;
-    	let t4_value = formatNumber(/*job*/ ctx[25]["max_salary"]) + "";
+    	let t4_value = formatNumber(/*job*/ ctx[23]["max_salary"]) + "";
     	let t4;
     	let t5;
     	let t6;
@@ -1138,24 +1169,24 @@ var app = (function () {
     	let div7;
     	let div4;
     	let i0;
-    	let t7_value = /*job*/ ctx[25]["location"] + "";
+    	let t7_value = /*job*/ ctx[23]["location"] + "";
     	let t7;
     	let t8;
     	let div5;
     	let i1;
-    	let t9_value = /*job*/ ctx[25]["company_name"] + "";
+    	let t9_value = /*job*/ ctx[23]["company_name"] + "";
     	let t9;
     	let t10;
     	let div6;
     	let i2;
-    	let t11_value = /*job*/ ctx[25]["seniority"] + "";
+    	let t11_value = /*job*/ ctx[23]["seniority"] + "";
     	let t11;
     	let t12;
     	let div9;
     	let div8;
     	let t13;
     	let a_href_value;
-    	let each_value_1 = /*job*/ ctx[25]["stack_in_requirements"];
+    	let each_value_1 = /*job*/ ctx[23]["stack_in_requirements"];
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -1202,40 +1233,40 @@ var app = (function () {
 
     			t13 = space();
     			attr_dev(h5, "class", "mb-0");
-    			add_location(h5, file, 201, 5, 5941);
+    			add_location(h5, file, 244, 5, 7700);
     			attr_dev(div0, "class", "col-6 align-items-center p-0");
-    			add_location(div0, file, 200, 4, 5893);
+    			add_location(div0, file, 243, 4, 7652);
     			attr_dev(div1, "class", "salary");
-    			add_location(div1, file, 204, 5, 6073);
+    			add_location(div1, file, 247, 5, 7832);
     			attr_dev(div2, "class", "col-6 d-flex justify-content-end align-items-center p-0 pe-4");
-    			add_location(div2, file, 203, 4, 5993);
+    			add_location(div2, file, 246, 4, 7752);
     			attr_dev(div3, "class", "row pt-2");
-    			add_location(div3, file, 199, 3, 5866);
+    			add_location(div3, file, 242, 3, 7625);
     			attr_dev(i0, "class", "bi bi-geo-alt pe-1");
-    			add_location(i0, file, 209, 32, 6290);
+    			add_location(i0, file, 252, 32, 8049);
     			attr_dev(div4, "class", "d-inline pe-2");
-    			add_location(div4, file, 209, 5, 6263);
+    			add_location(div4, file, 252, 5, 8022);
     			attr_dev(i1, "class", "bi bi-building pe-1");
-    			add_location(i1, file, 210, 32, 6380);
+    			add_location(i1, file, 253, 32, 8139);
     			attr_dev(div5, "class", "d-inline pe-2");
-    			add_location(div5, file, 210, 5, 6353);
+    			add_location(div5, file, 253, 5, 8112);
     			attr_dev(i2, "class", "bi bi-person-circle pe-1");
-    			add_location(i2, file, 211, 27, 6470);
+    			add_location(i2, file, 254, 27, 8229);
     			attr_dev(div6, "class", "d-inline");
-    			add_location(div6, file, 211, 5, 6448);
+    			add_location(div6, file, 254, 5, 8207);
     			attr_dev(div7, "class", "col-6 p-0");
-    			add_location(div7, file, 208, 4, 6234);
+    			add_location(div7, file, 251, 4, 7993);
     			attr_dev(div8, "class", "d-flex justify-content-end pe-4");
-    			add_location(div8, file, 214, 5, 6579);
+    			add_location(div8, file, 257, 5, 8338);
     			attr_dev(div9, "class", "col-6 p-0");
-    			add_location(div9, file, 213, 4, 6550);
+    			add_location(div9, file, 256, 4, 8309);
     			attr_dev(div10, "class", "row pt-1 job-tags");
-    			add_location(div10, file, 207, 3, 6198);
+    			add_location(div10, file, 250, 3, 7957);
     			attr_dev(div11, "class", "job-offer py-2 ps-4 mb-2");
-    			add_location(div11, file, 198, 2, 5824);
-    			attr_dev(a, "href", a_href_value = /*job*/ ctx[25]["url"]);
+    			add_location(div11, file, 241, 2, 7583);
+    			attr_dev(a, "href", a_href_value = /*job*/ ctx[23]["url"]);
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file, 197, 2, 5782);
+    			add_location(a, file, 240, 2, 7541);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -1276,15 +1307,15 @@ var app = (function () {
     			append_dev(a, t13);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*jobs*/ 64 && t0_value !== (t0_value = /*job*/ ctx[25]["title"] + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*jobs*/ 64 && t2_value !== (t2_value = formatNumber(/*job*/ ctx[25]["min_salary"]) + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*jobs*/ 64 && t4_value !== (t4_value = formatNumber(/*job*/ ctx[25]["max_salary"]) + "")) set_data_dev(t4, t4_value);
-    			if (dirty[0] & /*jobs*/ 64 && t7_value !== (t7_value = /*job*/ ctx[25]["location"] + "")) set_data_dev(t7, t7_value);
-    			if (dirty[0] & /*jobs*/ 64 && t9_value !== (t9_value = /*job*/ ctx[25]["company_name"] + "")) set_data_dev(t9, t9_value);
-    			if (dirty[0] & /*jobs*/ 64 && t11_value !== (t11_value = /*job*/ ctx[25]["seniority"] + "")) set_data_dev(t11, t11_value);
+    			if (dirty[0] & /*jobs*/ 64 && t0_value !== (t0_value = /*job*/ ctx[23]["title"] + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*jobs*/ 64 && t2_value !== (t2_value = formatNumber(/*job*/ ctx[23]["min_salary"]) + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*jobs*/ 64 && t4_value !== (t4_value = formatNumber(/*job*/ ctx[23]["max_salary"]) + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*jobs*/ 64 && t7_value !== (t7_value = /*job*/ ctx[23]["location"] + "")) set_data_dev(t7, t7_value);
+    			if (dirty[0] & /*jobs*/ 64 && t9_value !== (t9_value = /*job*/ ctx[23]["company_name"] + "")) set_data_dev(t9, t9_value);
+    			if (dirty[0] & /*jobs*/ 64 && t11_value !== (t11_value = /*job*/ ctx[23]["seniority"] + "")) set_data_dev(t11, t11_value);
 
     			if (dirty[0] & /*jobs*/ 64) {
-    				each_value_1 = /*job*/ ctx[25]["stack_in_requirements"];
+    				each_value_1 = /*job*/ ctx[23]["stack_in_requirements"];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -1307,7 +1338,7 @@ var app = (function () {
     				each_blocks.length = each_value_1.length;
     			}
 
-    			if (dirty[0] & /*jobs*/ 64 && a_href_value !== (a_href_value = /*job*/ ctx[25]["url"])) {
+    			if (dirty[0] & /*jobs*/ 64 && a_href_value !== (a_href_value = /*job*/ ctx[23]["url"])) {
     				attr_dev(a, "href", a_href_value);
     			}
     		},
@@ -1321,7 +1352,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(197:2) {#each jobs as job}",
+    		source: "(240:2) {#each jobs as job}",
     		ctx
     	});
 
@@ -1385,10 +1416,10 @@ var app = (function () {
     	let updating_end;
     	let t32;
     	let div10;
-    	let t33_value = formatNumber(Math.round(/*nice*/ ctx[8](/*start*/ ctx[1]) * 40000)) + "";
+    	let t33_value = nice(/*start*/ ctx[1], true) + "";
     	let t33;
     	let t34;
-    	let t35_value = formatNumber(Math.round(/*nice*/ ctx[8](/*end*/ ctx[2]) * 40000)) + "";
+    	let t35_value = nice(/*end*/ ctx[2], true) + "";
     	let t35;
     	let t36;
     	let t37;
@@ -1401,7 +1432,7 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	let each_value_4 = /*$jobCriteria*/ ctx[7].required_stack;
+    	let each_value_4 = /*$jobCriteria*/ ctx[8].required_stack;
     	validate_each_argument(each_value_4);
     	let each_blocks_2 = [];
 
@@ -1409,7 +1440,7 @@ var app = (function () {
     		each_blocks_2[i] = create_each_block_4(get_each_context_4(ctx, each_value_4, i));
     	}
 
-    	let each_value_3 = /*$jobCriteria*/ ctx[7].optional_stack;
+    	let each_value_3 = /*$jobCriteria*/ ctx[8].optional_stack;
     	validate_each_argument(each_value_3);
     	let each_blocks_1 = [];
 
@@ -1417,7 +1448,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
     	}
 
-    	let each_value_2 = /*$jobCriteria*/ ctx[7].location;
+    	let each_value_2 = /*$jobCriteria*/ ctx[8].location;
     	validate_each_argument(each_value_2);
     	let each_blocks = [];
 
@@ -1426,11 +1457,11 @@ var app = (function () {
     	}
 
     	function doublerangeslider_start_binding(value) {
-    		/*doublerangeslider_start_binding*/ ctx[23](value);
+    		/*doublerangeslider_start_binding*/ ctx[19](value);
     	}
 
     	function doublerangeslider_end_binding(value) {
-    		/*doublerangeslider_end_binding*/ ctx[24](value);
+    		/*doublerangeslider_end_binding*/ ctx[20](value);
     	}
 
     	let doublerangeslider_props = {};
@@ -1450,7 +1481,14 @@ var app = (function () {
 
     	binding_callbacks.push(() => bind(doublerangeslider, "start", doublerangeslider_start_binding));
     	binding_callbacks.push(() => bind(doublerangeslider, "end", doublerangeslider_end_binding));
-    	let if_block = /*jobs*/ ctx[6] && create_if_block(ctx);
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*jobs*/ ctx[6].length > 0) return create_if_block;
+    		if (/*jobsFetched*/ ctx[7]) return create_if_block_1;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type && current_block_type(ctx);
 
     	const block = {
     		c: function create() {
@@ -1553,101 +1591,101 @@ var app = (function () {
     			attr_dev(img, "class", "mx-auto d-block responsive");
     			if (img.src !== (img_src_value = "logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "bs-free logo");
-    			add_location(img, file, 101, 1, 2747);
-    			add_location(h4, file, 102, 1, 2823);
+    			add_location(img, file, 144, 1, 4170);
+    			add_location(h4, file, 145, 1, 4246);
     			attr_dev(label0, "for", "inputMustHave");
     			attr_dev(label0, "class", "form-label mb-0 mt-1");
-    			add_location(label0, file, 103, 1, 2862);
+    			add_location(label0, file, 146, 1, 4285);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "inputMustHave");
     			attr_dev(input0, "placeholder", "Stack that MUST be in a job offer (click ENTER to add)");
-    			add_location(input0, file, 105, 2, 2971);
+    			add_location(input0, file, 148, 2, 4394);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-outline-primary btn-sm");
-    			add_location(button0, file, 114, 3, 3220);
+    			add_location(button0, file, 157, 3, 4708);
     			attr_dev(div0, "class", "d-inline-flex p-2");
-    			add_location(div0, file, 113, 2, 3185);
+    			add_location(div0, file, 156, 2, 4673);
     			attr_dev(div1, "class", "d-flex mb-0");
-    			add_location(div1, file, 104, 1, 2943);
-    			add_location(div2, file, 117, 1, 3338);
+    			add_location(div1, file, 147, 1, 4366);
+    			add_location(div2, file, 160, 1, 4888);
     			attr_dev(label1, "for", "inputNiceHave");
     			attr_dev(label1, "class", "form-label mb-0 mt-1");
-    			add_location(label1, file, 123, 1, 3503);
+    			add_location(label1, file, 166, 1, 5082);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "inputNiceHave");
     			attr_dev(input1, "placeholder", "Stack that CAN be in a job offer (click ENTER to add)");
-    			add_location(input1, file, 125, 2, 3612);
+    			add_location(input1, file, 168, 2, 5191);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-outline-primary btn-sm");
-    			add_location(button1, file, 134, 3, 3860);
+    			add_location(button1, file, 177, 3, 5504);
     			attr_dev(div3, "class", "d-inline-flex p-2");
-    			add_location(div3, file, 133, 2, 3825);
+    			add_location(div3, file, 176, 2, 5469);
     			attr_dev(div4, "class", "d-flex mb-0");
-    			add_location(div4, file, 124, 1, 3584);
-    			add_location(div5, file, 137, 1, 3978);
+    			add_location(div4, file, 167, 1, 5163);
+    			add_location(div5, file, 180, 1, 5684);
     			attr_dev(label2, "for", "location");
     			attr_dev(label2, "class", "form-label form-label mb-0 mt-1");
-    			add_location(label2, file, 143, 1, 4142);
+    			add_location(label2, file, 186, 1, 5848);
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "location");
     			attr_dev(input2, "placeholder", "City or 'remote' (click ENTER to add)");
-    			add_location(input2, file, 145, 2, 4251);
+    			add_location(input2, file, 188, 2, 5957);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-outline-primary btn-sm");
-    			add_location(button2, file, 154, 3, 4472);
+    			add_location(button2, file, 197, 3, 6226);
     			attr_dev(div6, "class", "d-inline-flex p-2");
-    			add_location(div6, file, 153, 2, 4437);
+    			add_location(div6, file, 196, 2, 6191);
     			attr_dev(div7, "class", "d-flex mb-0");
-    			add_location(div7, file, 144, 1, 4223);
-    			add_location(div8, file, 157, 1, 4585);
+    			add_location(div7, file, 187, 1, 5929);
+    			add_location(div8, file, 200, 1, 6389);
     			attr_dev(label3, "for", "seniority");
     			attr_dev(label3, "class", "form-label form-label mb-0 mt-1");
-    			add_location(label3, file, 165, 3, 4786);
+    			add_location(label3, file, 208, 3, 6590);
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file, 172, 4, 5018);
+    			add_location(option0, file, 215, 4, 6822);
     			option1.__value = "Trainee";
     			option1.value = option1.__value;
-    			add_location(option1, file, 173, 4, 5061);
+    			add_location(option1, file, 216, 4, 6865);
     			option2.__value = "Junior";
     			option2.value = option2.__value;
-    			add_location(option2, file, 174, 4, 5106);
+    			add_location(option2, file, 217, 4, 6910);
     			option3.__value = "Mid";
     			option3.value = option3.__value;
-    			add_location(option3, file, 175, 4, 5149);
+    			add_location(option3, file, 218, 4, 6953);
     			option4.__value = "Senior";
     			option4.value = option4.__value;
-    			add_location(option4, file, 176, 4, 5186);
+    			add_location(option4, file, 219, 4, 6990);
     			option5.__value = "Expert";
     			option5.value = option5.__value;
-    			add_location(option5, file, 177, 4, 5229);
+    			add_location(option5, file, 220, 4, 7033);
     			attr_dev(select, "id", "seniority");
     			attr_dev(select, "class", "form-select mb-0");
     			attr_dev(select, "aria-label", "seniority select");
-    			if (/*$jobCriteria*/ ctx[7].experience === void 0) add_render_callback(() => /*select_change_handler*/ ctx[22].call(select));
-    			add_location(select, file, 166, 3, 4878);
+    			if (/*$jobCriteria*/ ctx[8].experience === void 0) add_render_callback(() => /*select_change_handler*/ ctx[18].call(select));
+    			add_location(select, file, 209, 3, 6682);
     			attr_dev(div9, "class", "col-6");
-    			add_location(div9, file, 164, 2, 4763);
+    			add_location(div9, file, 207, 2, 6567);
     			attr_dev(label4, "for", "salary");
     			attr_dev(label4, "class", "form-label form-label mb-0 mt-1");
-    			add_location(label4, file, 181, 3, 5331);
-    			add_location(div10, file, 183, 3, 5455);
+    			add_location(label4, file, 224, 3, 7135);
+    			add_location(div10, file, 226, 3, 7259);
     			attr_dev(div11, "class", "col-6 align-items-end");
-    			add_location(div11, file, 180, 2, 5292);
+    			add_location(div11, file, 223, 2, 7096);
     			attr_dev(div12, "class", "row");
-    			add_location(div12, file, 163, 1, 4743);
+    			add_location(div12, file, 206, 1, 6547);
     			attr_dev(button3, "class", "btn btn-primary");
-    			add_location(button3, file, 190, 2, 5621);
+    			add_location(button3, file, 233, 2, 7369);
     			attr_dev(div13, "class", "d-grid");
-    			add_location(div13, file, 189, 1, 5598);
+    			add_location(div13, file, 232, 1, 7346);
     			attr_dev(div14, "class", "container");
-    			add_location(div14, file, 100, 0, 2722);
-    			add_location(br0, file, 227, 6, 6910);
-    			add_location(br1, file, 227, 10, 6914);
+    			add_location(div14, file, 143, 0, 4145);
+    			add_location(br0, file, 271, 6, 8684);
+    			add_location(br1, file, 271, 10, 8688);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1717,7 +1755,7 @@ var app = (function () {
     			append_dev(select, option3);
     			append_dev(select, option4);
     			append_dev(select, option5);
-    			select_option(select, /*$jobCriteria*/ ctx[7].experience);
+    			select_option(select, /*$jobCriteria*/ ctx[8].experience);
     			append_dev(div12, t29);
     			append_dev(div12, div11);
     			append_dev(div11, label4);
@@ -1741,29 +1779,85 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[19]),
-    					listen_dev(input0, "keypress", /*onKeyPressRequired*/ ctx[15], false, false, false),
-    					listen_dev(button0, "click", /*addRequiredStack*/ ctx[9], false, false, false),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[20]),
-    					listen_dev(input1, "keypress", /*onKeyPressOptional*/ ctx[16], false, false, false),
-    					listen_dev(button1, "click", /*addOptionalStack*/ ctx[10], false, false, false),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[21]),
-    					listen_dev(input2, "keypress", /*onKeyPressLocation*/ ctx[17], false, false, false),
-    					listen_dev(button2, "click", /*addLocation*/ ctx[11], false, false, false),
-    					listen_dev(select, "change", /*select_change_handler*/ ctx[22]),
-    					listen_dev(button3, "click", /*fetchJobs*/ ctx[18], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[15]),
+    					listen_dev(
+    						input0,
+    						"keypress",
+    						function () {
+    							if (is_function(/*handleKeyPress*/ ctx[13](event, /*required_stack*/ ctx[3], /*$jobCriteria*/ ctx[8].required_stack, "inputMustHave"))) /*handleKeyPress*/ ctx[13](event, /*required_stack*/ ctx[3], /*$jobCriteria*/ ctx[8].required_stack, "inputMustHave").apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					),
+    					listen_dev(
+    						button0,
+    						"click",
+    						function () {
+    							if (is_function(/*addRequiredStack*/ ctx[9](/*required_stack*/ ctx[3], /*$jobCriteria*/ ctx[8].required_stack, "inputMustHave"))) /*addRequiredStack*/ ctx[9](/*required_stack*/ ctx[3], /*$jobCriteria*/ ctx[8].required_stack, "inputMustHave").apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[16]),
+    					listen_dev(
+    						input1,
+    						"keypress",
+    						function () {
+    							if (is_function(/*handleKeyPress*/ ctx[13](event, /*optional_stack*/ ctx[4], /*$jobCriteria*/ ctx[8].optional_stack, "inputNiceHave"))) /*handleKeyPress*/ ctx[13](event, /*optional_stack*/ ctx[4], /*$jobCriteria*/ ctx[8].optional_stack, "inputNiceHave").apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					),
+    					listen_dev(
+    						button1,
+    						"click",
+    						function () {
+    							if (is_function(/*addRequiredStack*/ ctx[9](/*optional_stack*/ ctx[4], /*$jobCriteria*/ ctx[8].optional_stack, "inputNiceHave"))) /*addRequiredStack*/ ctx[9](/*optional_stack*/ ctx[4], /*$jobCriteria*/ ctx[8].optional_stack, "inputNiceHave").apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[17]),
+    					listen_dev(
+    						input2,
+    						"keypress",
+    						function () {
+    							if (is_function(/*handleKeyPress*/ ctx[13](event, /*location*/ ctx[5], /*$jobCriteria*/ ctx[8].location, "location"))) /*handleKeyPress*/ ctx[13](event, /*location*/ ctx[5], /*$jobCriteria*/ ctx[8].location, "location").apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					),
+    					listen_dev(
+    						button2,
+    						"click",
+    						function () {
+    							if (is_function(/*addRequiredStack*/ ctx[9](/*location*/ ctx[5], /*$jobCriteria*/ ctx[8].location, "location"))) /*addRequiredStack*/ ctx[9](/*location*/ ctx[5], /*$jobCriteria*/ ctx[8].location, "location").apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					),
+    					listen_dev(select, "change", /*select_change_handler*/ ctx[18]),
+    					listen_dev(button3, "click", /*fetchJobs*/ ctx[14], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
-    		p: function update(ctx, dirty) {
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+
     			if (dirty[0] & /*required_stack*/ 8 && input0.value !== /*required_stack*/ ctx[3]) {
     				set_input_value(input0, /*required_stack*/ ctx[3]);
     			}
 
-    			if (dirty[0] & /*removeCriterionRequired, $jobCriteria*/ 4224) {
-    				each_value_4 = /*$jobCriteria*/ ctx[7].required_stack;
+    			if (dirty[0] & /*removeCriterionRequired, $jobCriteria*/ 1280) {
+    				each_value_4 = /*$jobCriteria*/ ctx[8].required_stack;
     				validate_each_argument(each_value_4);
     				let i;
 
@@ -1790,8 +1884,8 @@ var app = (function () {
     				set_input_value(input1, /*optional_stack*/ ctx[4]);
     			}
 
-    			if (dirty[0] & /*removeCriterionOptional, $jobCriteria*/ 8320) {
-    				each_value_3 = /*$jobCriteria*/ ctx[7].optional_stack;
+    			if (dirty[0] & /*removeCriterionOptional, $jobCriteria*/ 2304) {
+    				each_value_3 = /*$jobCriteria*/ ctx[8].optional_stack;
     				validate_each_argument(each_value_3);
     				let i;
 
@@ -1818,8 +1912,8 @@ var app = (function () {
     				set_input_value(input2, /*location*/ ctx[5]);
     			}
 
-    			if (dirty[0] & /*removeCriterionLocation, $jobCriteria*/ 16512) {
-    				each_value_2 = /*$jobCriteria*/ ctx[7].location;
+    			if (dirty[0] & /*removeCriterionLocation, $jobCriteria*/ 4352) {
+    				each_value_2 = /*$jobCriteria*/ ctx[8].location;
     				validate_each_argument(each_value_2);
     				let i;
 
@@ -1842,8 +1936,8 @@ var app = (function () {
     				each_blocks.length = each_value_2.length;
     			}
 
-    			if (dirty[0] & /*$jobCriteria*/ 128) {
-    				select_option(select, /*$jobCriteria*/ ctx[7].experience);
+    			if (dirty[0] & /*$jobCriteria*/ 256) {
+    				select_option(select, /*$jobCriteria*/ ctx[8].experience);
     			}
 
     			const doublerangeslider_changes = {};
@@ -1861,20 +1955,19 @@ var app = (function () {
     			}
 
     			doublerangeslider.$set(doublerangeslider_changes);
-    			if ((!current || dirty[0] & /*start*/ 2) && t33_value !== (t33_value = formatNumber(Math.round(/*nice*/ ctx[8](/*start*/ ctx[1]) * 40000)) + "")) set_data_dev(t33, t33_value);
-    			if ((!current || dirty[0] & /*end*/ 4) && t35_value !== (t35_value = formatNumber(Math.round(/*nice*/ ctx[8](/*end*/ ctx[2]) * 40000)) + "")) set_data_dev(t35, t35_value);
+    			if ((!current || dirty[0] & /*start*/ 2) && t33_value !== (t33_value = nice(/*start*/ ctx[1], true) + "")) set_data_dev(t33, t33_value);
+    			if ((!current || dirty[0] & /*end*/ 4) && t35_value !== (t35_value = nice(/*end*/ ctx[2], true) + "")) set_data_dev(t35, t35_value);
 
-    			if (/*jobs*/ ctx[6]) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
+    				if (if_block) if_block.d(1);
+    				if_block = current_block_type && current_block_type(ctx);
+
     				if (if_block) {
-    					if_block.p(ctx, dirty);
-    				} else {
-    					if_block = create_if_block(ctx);
     					if_block.c();
     					if_block.m(div14, t40);
     				}
-    			} else if (if_block) {
-    				if_block.d(1);
-    				if_block = null;
     			}
     		},
     		i: function intro(local) {
@@ -1892,7 +1985,11 @@ var app = (function () {
     			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
     			destroy_component(doublerangeslider);
-    			if (if_block) if_block.d();
+
+    			if (if_block) {
+    				if_block.d();
+    			}
+
     			if (detaching) detach_dev(br0);
     			if (detaching) detach_dev(br1);
     			mounted = false;
@@ -1915,21 +2012,29 @@ var app = (function () {
     	return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
     }
 
+    function nice(num, sep) {
+    	if (!num && num !== 0) return "";
+    	num = Math.round(num.toFixed(2) * 40000);
+
+    	if (sep) {
+    		num = formatNumber(num);
+    	}
+
+    	return num;
+    }
+
     function instance($$self, $$props, $$invalidate) {
     	let $jobCriteria,
     		$$unsubscribe_jobCriteria = noop,
-    		$$subscribe_jobCriteria = () => ($$unsubscribe_jobCriteria(), $$unsubscribe_jobCriteria = subscribe(jobCriteria, $$value => $$invalidate(7, $jobCriteria = $$value)), jobCriteria);
+    		$$subscribe_jobCriteria = () => ($$unsubscribe_jobCriteria(), $$unsubscribe_jobCriteria = subscribe(jobCriteria, $$value => $$invalidate(8, $jobCriteria = $$value)), jobCriteria);
 
     	$$self.$$.on_destroy.push(() => $$unsubscribe_jobCriteria());
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
     	let start = 0;
     	let end = 1;
-
-    	const nice = d => {
-    		if (!d && d !== 0) return "";
-    		return d.toFixed(2);
-    	};
+    	
+    	
 
     	const jobCriteria = writable({
     		required_stack: [],
@@ -1946,15 +2051,27 @@ var app = (function () {
     	let optional_stack;
     	let location;
 
-    	function addRequiredStack() {
-    		if (required_stack != null && required_stack !== "" && !$jobCriteria.required_stack.includes(required_stack)) {
-    			let stack = $jobCriteria.required_stack;
-    			stack.push(required_stack);
-    			set_store_value(jobCriteria, $jobCriteria.required_stack = stack, $jobCriteria);
-    			document.getElementById("inputMustHave").value = "";
-    			$$invalidate(3, required_stack = "");
+    	// function addRequiredStack() {
+    	// 	if (required_stack != null && required_stack !== "" && !$jobCriteria.required_stack.includes(required_stack)) {
+    	// 		let stack = $jobCriteria.required_stack
+    	// 		stack.push(required_stack);
+    	// 		$jobCriteria.required_stack = stack;
+    	// 		document.getElementById('inputMustHave').value = "";
+    	// 		required_stack = '';
+    	// 	}
+    	// }
+    	function addRequiredStack(stackType, storeObject, inputID) {
+    		if (stackType != null && stackType !== "" && !storeObject.includes(stackType)) {
+    			let stack = storeObject;
+    			stack.push(stackType);
+    			storeObject = stack;
+    			jobCriteria.set($jobCriteria);
+    			document.getElementById(inputID).value = "";
+    			stackType = "";
     		}
     	}
+
+    	
 
     	function addOptionalStack() {
     		if (optional_stack != null && optional_stack !== "" && !$jobCriteria.optional_stack.includes(optional_stack)) {
@@ -1966,6 +2083,8 @@ var app = (function () {
     		}
     	}
 
+    	
+
     	function addLocation() {
     		if (location != null && location !== "" && !$jobCriteria.location.includes(location)) {
     			let stack = $jobCriteria.location;
@@ -1976,19 +2095,32 @@ var app = (function () {
     		}
     	}
 
-    	function removeCriterionRequired(crit) {
-    		let arr = $jobCriteria.required_stack;
+    	
+
+    	function removeCriterionRequired(crit, storeObject) {
+    		let arr = storeObject;
     		const index = arr.indexOf(crit);
     		arr.splice(index, 1);
-    		set_store_value(jobCriteria, $jobCriteria.required_stack = arr, $jobCriteria);
+    		storeObject = arr;
+    		jobCriteria.set($jobCriteria);
     	}
 
+    	
+
+    	// function removeCriterionRequired(crit) {
+    	// 	let arr = $jobCriteria.required_stack;
+    	// 	const index = arr.indexOf(crit);
+    	// 	arr.splice(index, 1);
+    	// 	$jobCriteria.required_stack = arr;
+    	// }
     	function removeCriterionOptional(crit) {
     		let arr = $jobCriteria.optional_stack;
     		const index = arr.indexOf(crit);
     		arr.splice(index, 1);
     		set_store_value(jobCriteria, $jobCriteria.optional_stack = arr, $jobCriteria);
     	}
+
+    	
 
     	function removeCriterionLocation(crit) {
     		let arr = $jobCriteria.location;
@@ -1997,34 +2129,39 @@ var app = (function () {
     		set_store_value(jobCriteria, $jobCriteria.location = arr, $jobCriteria);
     	}
 
-    	const onKeyPressRequired = e => {
-    		if (e.charCode === 13) addRequiredStack();
-    	};
+    	
 
-    	const onKeyPressOptional = e => {
-    		if (e.charCode === 13) addOptionalStack();
-    	};
-
-    	const onKeyPressLocation = e => {
-    		if (e.charCode === 13) addLocation();
-    	};
-
-    	let jobs;
-
-    	async function fetchJobs() {
-    		set_store_value(jobCriteria, $jobCriteria.min_salary = Math.round(nice(start) * 40000), $jobCriteria);
-    		set_store_value(jobCriteria, $jobCriteria.max_salary = Math.round(nice(end) * 40000), $jobCriteria);
-
-    		const res = await fetch("/jobs", {
-    			method: "POST",
-    			headers: { "Content-Type": "application/json" },
-    			body: JSON.stringify($jobCriteria)
-    		});
-
-    		const json = await res.json();
-    		$$invalidate(6, jobs = Object.values(json));
+    	function handleKeyPress(e, stackType, storeObject, inputID) {
+    		if (e.charCode === 13) addRequiredStack(stackType, storeObject, inputID);
     	}
 
+    	
+
+    	// const onKeyPressRequired = e => {
+    	// 	if (e.charCode === 13) addRequiredStack();
+    	// };
+    	// const onKeyPressOptional = e => {
+    	// 	if (e.charCode === 13) addOptionalStack();
+    	// };
+    	// const onKeyPressLocation = e => {
+    	// 	if (e.charCode === 13) addLocation();
+    	// };
+    	let jobs = []; // tutaj zrobic null
+
+    	let jobsFetched = false;
+
+    	async function fetchJobs() {
+    		set_store_value(jobCriteria, $jobCriteria.min_salary = nice(start), $jobCriteria);
+    		set_store_value(jobCriteria, $jobCriteria.max_salary = nice(end), $jobCriteria);
+    		let jobFetchParams = new URLSearchParams($jobCriteria).toString();
+    		let jobFetchURL = new URL("/jobs?" + jobFetchParams, window.location.href);
+    		const res = await fetch(jobFetchURL, { method: "GET" });
+    		const json = await res.json();
+    		$$invalidate(6, jobs = Object.values(json));
+    		$$invalidate(7, jobsFetched = true);
+    	}
+
+    	
     	const writable_props = [];
 
     	Object_1.keys($$props).forEach(key => {
@@ -2065,8 +2202,8 @@ var app = (function () {
     		DoubleRangeSlider,
     		start,
     		end,
-    		nice,
     		formatNumber,
+    		nice,
     		writable,
     		jobCriteria,
     		required_stack,
@@ -2078,10 +2215,9 @@ var app = (function () {
     		removeCriterionRequired,
     		removeCriterionOptional,
     		removeCriterionLocation,
-    		onKeyPressRequired,
-    		onKeyPressOptional,
-    		onKeyPressLocation,
+    		handleKeyPress,
     		jobs,
+    		jobsFetched,
     		fetchJobs,
     		$jobCriteria
     	});
@@ -2093,6 +2229,7 @@ var app = (function () {
     		if ("optional_stack" in $$props) $$invalidate(4, optional_stack = $$props.optional_stack);
     		if ("location" in $$props) $$invalidate(5, location = $$props.location);
     		if ("jobs" in $$props) $$invalidate(6, jobs = $$props.jobs);
+    		if ("jobsFetched" in $$props) $$invalidate(7, jobsFetched = $$props.jobsFetched);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -2107,17 +2244,13 @@ var app = (function () {
     		optional_stack,
     		location,
     		jobs,
+    		jobsFetched,
     		$jobCriteria,
-    		nice,
     		addRequiredStack,
-    		addOptionalStack,
-    		addLocation,
     		removeCriterionRequired,
     		removeCriterionOptional,
     		removeCriterionLocation,
-    		onKeyPressRequired,
-    		onKeyPressOptional,
-    		onKeyPressLocation,
+    		handleKeyPress,
     		fetchJobs,
     		input0_input_handler,
     		input1_input_handler,
